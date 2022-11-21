@@ -6,10 +6,8 @@ function Home() {
     <>
       <Header />
       <div className="home">
-        <div className="container">
         <div className="toppart">
-
-        </div>
+          <img src="" alt="" />
         </div>
       </div>
     </>
