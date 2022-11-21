@@ -1,5 +1,20 @@
-.home{
-  .toppart{
-    position: relative;
-  }
+.home {
+    .toppart {
+        display: block;
+    }
+}
+
+.bg-img {
+    background: url('https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg') center no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+}
+
+.form-control {
+    box-shadow: none !important;
+}
+
+.bg-img2 {
+    background: url('https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg') center no-repeat;
+    background-size: cover;
 }

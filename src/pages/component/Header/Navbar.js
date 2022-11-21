@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="Navbar">
       <div className="container">
-        <ul className="nav">
+        <ul className="nav py-2">
           <li className="nav-item">
             <a className="nav-link" aria-current="page" href="#">
               Pass
@@ -26,7 +26,12 @@ function Navbar() {
             <a className="nav-link ">Show</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link ">Guided Tours <span className="badge badge-warning">New</span> </a>
+            <a className="nav-link position-relative">
+              Guided Tours{" "}
+              <span className="badge bg-danger position-absolute badge-warning p-1 start-0 ms-3">
+                New
+              </span>{" "}
+            </a>
           </li>
           <li className="nav-item">
             <a className="nav-link ">Hotel</a>
