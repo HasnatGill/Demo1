@@ -1,0 +1,75 @@
+.topbar {
+    .container {
+        .left {
+            background-color: #ffffff;
+            display: flex;
+            float: left;
+            margin-top: 15px;
+
+            p {
+                background-color: rgb(235, 221, 221);
+                // width: 300px;
+                padding: 3px;
+                border: none;
+                border-radius: 5px;
+                margin-left: 20px;
+                margin-top: 3px;
+
+                input {
+                    background-color: rgb(235, 221, 221);
+                    width: 300px;
+                    padding: 3px;
+                    border: none;
+                    border-radius: 5px;
+                    margin-left: 5px;
+                    outline: none;
+                }
+            }
+        }
+
+        .right {
+            float: right;
+            margin-top: 15px;
+            background-color: #ffffff;
+            text-align: right;
+
+            select {
+                border: 0.5px solid rgba(157, 155, 155, 0.623);
+                width: 65px;
+                outline: none;
+                margin-right: 15px;
+                padding: 3px;
+            }
+
+            .Help {
+                border: 1px solid orangered;
+                background-color: white;
+                color: black;
+                border-radius: 5px;
+                padding: 4px 15px 5px 15px;
+                margin-right: 8px;
+
+            }
+
+            .Join {
+
+                border: none;
+                margin-right: 8px;
+                border-radius: 5px;
+                background-color: black;
+                padding: 5px 15px 5px 15px;
+                color: white;
+
+            }
+
+            .Sign {
+                border: none;
+                background-color: orangered;
+                color: white;
+                padding: 5px 15px 5px 15px;
+                border-radius: 5px;
+            }
+        }
+
+    }
+}

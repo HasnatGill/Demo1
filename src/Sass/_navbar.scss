@@ -1,0 +1,27 @@
+.Navbar {
+    .container {
+        .nav {
+            margin-left: -15px;
+
+            .nav-item {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                .nav-link {
+                    padding-right: 10px;
+                    color: black;
+                    font-weight: bold;
+                    position: relative;
+
+                    // margin-left: -1px;
+                    .badge {
+                        background-color: orangered;
+                        color: white;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
