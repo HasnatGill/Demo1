@@ -1,0 +1,33 @@
+.Show {
+    .container {
+        justify-content: center;
+
+        .table {
+            text-align: center;
+
+            table {
+                text-align: center;
+                margin-top: 25px;
+                width: 50%;
+                border: 1px solid black;
+
+                tr {
+                    th {
+                        padding: 15px;
+                        background-color: #0d6efd;
+                        color: white;
+                        border: 2px solid white;
+
+                    }
+
+                    td {
+                        padding: 20px;
+                        background-color: #e3e3e3;
+                        border-right: 2px solid #ffffff;
+                        border-bottom: 2px solid #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

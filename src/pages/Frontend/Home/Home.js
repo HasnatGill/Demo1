@@ -35,7 +35,7 @@ function Home() {
       </div>
       <div className="container my-5">
         <div className="mt-5 position-relative">
-          <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+          <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="false">
             <button className="carousel-control-prev position-absolute" style={{ left: "-150px" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true" style={{
                 backgroundImage: 'url("https://th.bing.com/th/id/R.fb07a375cf3b99181fd56f200d043a2d?rik=1wThO72s6d2m8Q&pid=ImgRaw&r=0")'
@@ -240,7 +240,7 @@ function Home() {
                     </div>
                   </div>
                   <div className="col-2">
-                    <div className="card h-100 border-0">
+                    <div className="card h-100">
                       <span
                         class="badge text-bg-danger rounded-0 top-3 mt-2 position-absolute"
                         style={{ marginLeft: "-8px" }}
