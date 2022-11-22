@@ -17,9 +17,10 @@ function Top() {
           </p>
         </div>
         <div className="right">
+          <TbWorld className="world"/>
           <select>
-          <option defaultValue="Eng">
-               ENG
+            <option defaultValue="Eng">
+              ENG
             </option>
             <option value="URD">
               URD
