@@ -2,23 +2,19 @@
     .container {
         .nav {
             margin-left: -15px;
-
             .nav-item {
                 padding-top: 10px;
                 padding-bottom: 10px;
+                padding: 5px;
                 .nav-link {
                     padding-right: 10px;
                     color: black;
                     font-weight: bold;
                     position: relative;
+                    font-family: 'Raleway', sans-serif;
 
                     // margin-left: -1px;
                     .badge {
-                        // background-color: orangered;
-                        // color: white;
-                        // position: absolute;
-                        // left: 0;
-                        // bottom: 0;
                         top: 28px;
                     }
                 }
