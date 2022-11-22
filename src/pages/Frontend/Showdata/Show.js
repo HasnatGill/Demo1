@@ -1,6 +1,7 @@
 import React from 'react'
-import Data from '../../../../'
+import Data from '../../../../src/Demo.json'
 
+let Categories = Data.categories
 
 function Show() {
     return (
@@ -16,12 +17,37 @@ function Show() {
                             <th>Main Category</th>
                             <th>Sub Category</th>
                         </tr>
-                        <tr>
-                            <td>Alfreds Futterkiste</td>
-                            <td>Maria Anders</td>
-                            <td>Germany</td>
-                        </tr>
-                        
+                        {
+                            Categories.map(item => {
+                                return (
+
+                                    <tr key={item.id}>
+                                        <td>{item.name}</td>
+                                        <td>{item.main_category.map(data => {
+                                            return (
+                                                <div key={data.id}>
+                                                    {data.name}
+                                                </div>
+
+                                            )
+                                        })}
+                                        </td>
+                                        <td>{item.main_category.map(sub => {
+                                            return (
+                                                <div key={sub.id}>
+                                                    {sub.sub_category.map(cat => {
+                                                        <div key={cat.id}>
+                                                            {cat.name}
+                                                        </div>
+                                                    })}
+                                                </div>
+                                            )
+                                        })}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+
                     </table>
                 </div>
             </div>
