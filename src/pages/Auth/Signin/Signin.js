@@ -9,10 +9,6 @@ import axios from "axios";
 
 const initialState = { email: "", password: "", firstName: "", lastName: "", middle_name: "" }
 
-
-// ""
-
-
 function Signin() {
 
   const [state, setState] = useState(initialState)
@@ -21,20 +17,16 @@ function Signin() {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = e => {
+    const data = {
+      ...state
+    };
     e.preventDefault()
-    try {
-      await axios.post("http://bookdarak.com/api/api.php" ,state)
-    } catch (error) {
-      console.log(error)
-    }
-    // await axios
-    //   .post("http://bookdarak.com/api/api.php", state)
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-
-      
+    axios.post(`https://jsonplaceholder.typicode.com/users`, { data })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
   }
 
 

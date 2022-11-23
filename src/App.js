@@ -4,6 +4,7 @@ import Signin from "./pages/Auth/Signin";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 // import Home from "./pages/Frontend/Home/Home";
 // import Show from "./pages/Frontend/Showdata";
+import Api from './pages/Frontend/Showdata/Api'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       {/* <Home /> */}
       <Signin />
       {/* <Show /> */}
+      {/* <Api /> */}
     </>
   );
 }
