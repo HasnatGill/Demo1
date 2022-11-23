@@ -32,13 +32,15 @@ function Show() {
                                             )
                                         })}
                                         </td>
-                                        <td>{item.main_category.map(sub => {
+                                        <td>{item.main_category.map(item => {
                                             return (
-                                                <div key={sub.id}>
-                                                    {sub.sub_category.map(cat => {
-                                                        <div key={cat.id}>
-                                                            {cat.name}
-                                                        </div>
+                                                <div key={item.id}>
+                                                    {item.sub_category.map(sub => {
+                                                        return (
+                                                            <div key={sub.id}>
+                                                                {sub.name}
+                                                            </div>
+                                                        )
                                                     })}
                                                 </div>
                                             )
