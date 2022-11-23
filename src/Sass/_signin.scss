@@ -1,96 +1,120 @@
-.Sign-page{
-    background: #2193b0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     min-height: 100vh;  
-     margin: 0;
-     padding: 0;
-     .container{
-         justify-content: center;
-         align-content: center;
-         
-         .card{
-             width: 40%;
-            //  min-height: 100vh;
-          .header{
-            justify-content: center;
-            text-align: center;
-            .em{
-                font-size:40px ;
-                margin-bottom: 10px;
+.Sign-page {
+    background: #2193b0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+
+    .container {
+        flex: 1 0 auto;
+        min-height: 100vh;
+
+        .card {
+
+            // min-height: 100vh;
+            // margin-top: 100px;
+            width: 38%;
+            position: absolute;
+            top: 50;
+            left: 50;
+            margin-left: 330px;
+
+            .header {
+                justify-content: center;
+                text-align: center;
+
+                .em {
+                    font-size: 40px;
+                    margin-bottom: 10px;
+                }
+
+                .Button {
+                    background-color: yellow;
+                    color: black;
+                    padding: 20;
+                    border: none;
+                    border-radius: 10px;
+                    font-weight: 400;
+                }
             }
-             .Button{
-                background-color: yellow;
-                color: black;
-                padding: 20;
-                border: none;
-                border-radius: 10px;
-                font-weight:400;
-            }        
-        }
-        .icon{
-            flex-direction: row;
-            display: flex;
-            justify-content: center;
-    text-align: center;
-h6{
-    padding: 7px;
-    color: #312f2f;
-    
-}    
-}
-p{
-    color: #312f2f;
-    font-size:18 ;
-}
-.input{
-    padding:10px ;
-    .inputtext{
-        background-color: #cfc9c9;
-        border: none;
-        outline: none;
-        color: rgb(0, 0, 0);
-        border-radius: 7px;
-        padding:7px;
-    }
-    .Froget{
-        text-align: right;
-        float: right;
-        margin-top: 5px;
-        color: orangered;
-        text-decoration: none;
-    }
-    .checkbox{
-        display: flex;
-        input{
-            color: orangered;
-        }
-        p{
-            color: black;
-            margin-top: 10px;
-            padding-left: 10px;
-        }
-        span{
-            color: orangered;
-        }
-        
-    }
-    
-    .Botton{
-        background-color:  orangered;
-        color: rgb(255, 255, 255);
-        padding: 20;
-        border: none;
-        border-radius: 10px;
-        font-weight:400;
-    }
-    .Signlink{
-        color: orangered;
-        text-decoration: none;
 
-    }
-}
+            .icon {
+                flex-direction: row;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+
+                h6 {
+                    padding: 7px;
+                    color: #312f2f;
+
+                }
+            }
+
+            p {
+                color: #312f2f;
+                font-size: 18;
+            }
+
+            .input {
+                padding: 10px;
+
+                .inputtext {
+                    background-color: #cfc9c9;
+                    border: none;
+                    outline: none;
+                    color: rgb(0, 0, 0);
+                    border-radius: 7px;
+                    padding: 7px;
+                }
+
+                .Froget {
+                    text-align: right;
+                    float: right;
+                    margin-top: 5px;
+                    color: orangered;
+                    text-decoration: none;
+                }
+
+                .checkbox {
+                    display: flex;
+
+                    input {
+                        color: orangered;
+                    }
+
+                    p {
+                        color: black;
+                        margin-top: 10px;
+                        padding-left: 10px;
+                    }
+
+                    span {
+                        color: orangered;
+                    }
+
+                }
+
+                .Botton {
+                    background-color: orangered;
+                    color: rgb(255, 255, 255);
+                    padding: 20;
+                    border: none;
+                    border-radius: 10px;
+                    font-weight: 400;
+                }
+
+                .Signlink {
+                    color: orangered;
+                    text-decoration: none;
+
+                }
+            }
 
         }
-     }
+    }
 }

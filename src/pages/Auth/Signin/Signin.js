@@ -1,12 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFacebook } from "react-icons/bs";
 import { BsApple } from "react-icons/bs";
 import { SiNaver } from "react-icons/si";
 import { BsGoogle } from "react-icons/bs";
 import { RiKakaoTalkFill } from "react-icons/ri";
-// import { AiFillEye } from "react-icons/ai";
+import axios from "axios";
+
+
+const initialState = { email: "", password: "", firstName: "", lastName: "", middle_name: "" }
+
+
+// ""
+
 
 function Signin() {
+
+  const [state, setState] = useState(initialState)
+
+  const handleChange = e => {
+    setState(s => ({ ...s, [e.target.name]: e.target.value }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      await axios.post("http://bookdarak.com/api/api.php" ,state)
+    } catch (error) {
+      console.log(error)
+    }
+    // await axios
+    //   .post("http://bookdarak.com/api/api.php", state)
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
+
+      
+  }
+
+
   return (
     <div className="Sign-page">
       <div className="container">
@@ -14,7 +45,7 @@ function Signin() {
           <div className="header">
             <h4>Let's Go</h4>
             <div className="em">
-            <span className="border-0">&#128521;</span>
+              <span className="border-0">&#128521;</span>
             </div>
             <button className="Button px-4 py-1">
               <RiKakaoTalkFill /> Sign in with kakaotalk
@@ -22,19 +53,19 @@ function Signin() {
           </div>
           <div className="icon mt-1">
             <h6>
-              <BsApple className="me-1"/>
+              <BsApple className="me-1" />
               Apple
             </h6>
             <h6>
-              <BsFacebook className="me-1"/>
+              <BsFacebook className="me-1" />
               FaceBook
             </h6>
             <h6>
-              <SiNaver className="me-1"/>
+              <SiNaver className="me-1" />
               Naver
             </h6>
             <h6>
-              <BsGoogle className="me-1"/>
+              <BsGoogle className="me-1" />
               Google
             </h6>
           </div>
@@ -44,7 +75,9 @@ function Signin() {
               <div className="col-6">
                 <label className="fw-bold">First Name</label>
                 <input
+                  onChange={handleChange}
                   type="text"
+                  name="firstName"
                   placeholder="First Name"
                   className="inputtext mt-1 mb-1"
                 />
@@ -52,9 +85,23 @@ function Signin() {
               <div className="col-6">
                 <label className="fw-bold">last Name</label>
                 <input
+                  onChange={handleChange}
                   type="text"
+                  name="lastName"
                   placeholder="last Name"
                   className="inputtext mt-2 mb-1"
+                />
+              </div>
+            </div>
+            <div className="row m-0 p-0 ">
+              <div className="col">
+                <label className="fw-bold">Middle Name</label>
+                <input
+                  onChange={handleChange}
+                  type="text"
+                  name="middle_name"
+                  placeholder="Middle Name"
+                  className="inputtext w-100 mt-2 mb-1"
                 />
               </div>
             </div>
@@ -63,6 +110,8 @@ function Signin() {
                 <label className="fw-bold">Email Address</label>
                 <input
                   type="email"
+                  name="email"
+                  onChange={handleChange}
                   required
                   placeholder="Email Address"
                   className="inputtext w-100 mt-2 mb-1"
@@ -74,8 +123,10 @@ function Signin() {
                 <label className="fw-bold">Password</label>
                 <input
                   type="text"
+                  name="password"
                   placeholder="Password"
                   className="inputtext w-100 mt-2 mb-1 "
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -88,7 +139,7 @@ function Signin() {
             </div>
             <div className="row m-0 p-0  ">
               <div className="col checkbox" >
-                <input type="checkbox"  />
+                <input type="checkbox" />
                 <p>
                   I've read and accepted <span>Terms of Service</span> and{" "}
                   <span>Privacy Policy</span>
@@ -97,7 +148,7 @@ function Signin() {
             </div>
             <div className="row m-0 p-0 text-center">
               <div className="col-12 my-1">
-                <button className="Botton w-75 py-1">Sign in </button>
+                <button className="Botton w-75 py-1" onClick={handleSubmit}>Sign in </button>
               </div>
               <div className="col-12">
                 Don't have an account? <a href="#" className="Signlink">Sign up</a>
