@@ -7,7 +7,7 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import axios from "axios";
 
 
-const initialState = { email: "", password: "", first_name: "", last_name: "", middle_name: "" }
+const initialState = { email: "", password: "", first_name: "", last_name: "", middle_name: "", type: "" }
 
 function Signin() {
 
@@ -22,15 +22,24 @@ function Signin() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setLoading(true)
-    const data = {
-      ...state
-    };
+    // const data = {
+    //   ...state
+    // };
+    // let type = "register"
+    // let { email, password, first_name, middle_name, last_name,type } = state
     e.preventDefault()
-    axios.post(`http://bookdarak.com/api/api.php`, { data })
+    axios.post(`http://bookdarak.com/api/api.php`, {
+      email: state.email,
+      password: state.password,
+      last_name: state.last_name,
+      middle_name: state.middle_name,
+      first_name: state.first_name,
+      type: state.type,
+    })
       .then(res => {
         console.log(res);
-        setState("")
         setLoading(false)
+        console.log(state.email, state.password, state.last_name, state.middle_name, state.first_name, state.type)
       })
       .catch(error => {
         console.log(error)
@@ -130,6 +139,16 @@ function Signin() {
                       className="inputtext form-control mt-2 mb-1 "
                       onChange={handleChange}
                     />
+                  </div>
+                </div>
+                <div className="row m-0 p-0">
+                  <div className="col">
+                    <label className="fw-bold">Type</label>
+                    <select name="type" className="inputtext my-2 form-control" onChange={handleChange}>
+                      <option defaultValue="">Choose the Type</option>
+                      <option value="register">Register</option>
+                      <option value="Login">Login</option>
+                    </select>
                   </div>
                 </div>
                 <div className="row m-0 p-0">
