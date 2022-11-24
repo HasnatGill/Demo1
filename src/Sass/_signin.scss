@@ -8,21 +8,14 @@
     min-height: 100vh;
     justify-content: center;
     align-content: center;
+    align-items: center;
 
     .container {
         flex: 1 0 auto;
-        min-height: 100vh;
 
         .card {
-
-            // min-height: 100vh;
-            // margin-top: 100px;
-            width: 38%;
-            position: absolute;
-            top: 50;
-            left: 50;
-            margin-left: 330px;
-
+            // width: 55%;
+        
             .header {
                 justify-content: center;
                 text-align: center;
