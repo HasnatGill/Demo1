@@ -31,9 +31,11 @@ function Signin() {
         console.log(res);
         setState("")
         setLoading(false)
+        window.notify("User is Sign Up Successfully", "success")
       })
       .catch(error => {
         console.log(error)
+        window.notify("Some thing is Wrong try Again", "error")
       })
   }
 
@@ -150,8 +152,7 @@ function Signin() {
                 </div>
                 <div className="row m-0 p-0 text-center">
                   <div className="col-12 my-1">
-                    <button className="Botton w-75 py-1" disabled={loading
-                    } onClick={handleSubmit}>
+                    <button className="Botton w-75 py-1" disabled={loading} onClick={handleSubmit}>
                       {
                         !loading
                           ? "Sign Up"

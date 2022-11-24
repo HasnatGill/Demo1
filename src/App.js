@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import Signin from "./pages/Auth/Signin";
+import { ToastContainer } from 'react-toastify';
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 // import Home from "./pages/Frontend/Home/Home";
 // import Show from "./pages/Frontend/Showdata";
@@ -13,6 +14,7 @@ function App() {
       <Signin />
       {/* <Show /> */}
       {/* <Api /> */}
+      <ToastContainer />
     </>
   );
 }
