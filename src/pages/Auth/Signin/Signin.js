@@ -49,7 +49,7 @@ function Signin() {
                 <div className="em">
                   <span className="border-0">&#128521;</span>
                 </div>
-                <button className="Button px-4 py-1">
+                <button className="Button px-4 py-1 my-2">
                   <RiKakaoTalkFill /> Sign in with kakaotalk
                 </button>
               </div>
