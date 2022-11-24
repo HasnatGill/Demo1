@@ -7,7 +7,7 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import axios from "axios";
 
 
-const initialState = { email: "", password: "", firstName: "", lastName: "", middle_name: "" }
+const initialState = { email: "", password: "", first_name: "", last_name: "", middle_name: "" }
 
 function Signin() {
 
@@ -17,15 +17,18 @@ function Signin() {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     const data = {
       ...state
     };
     e.preventDefault()
-    axios.post(`https://jsonplaceholder.typicode.com/users`, { data })
+    axios.post(`http://bookdarak.com/api/api.php`, { data })
       .then(res => {
         console.log(res);
-        console.log(res.data);
+      })
+      .catch(error => {
+        console.log(error)
       })
   }
 
@@ -69,7 +72,7 @@ function Signin() {
                 <input
                   onChange={handleChange}
                   type="text"
-                  name="firstName"
+                  name="first_name"
                   placeholder="First Name"
                   className="inputtext mt-1 mb-1"
                 />
@@ -79,7 +82,7 @@ function Signin() {
                 <input
                   onChange={handleChange}
                   type="text"
-                  name="lastName"
+                  name="last_name"
                   placeholder="last Name"
                   className="inputtext mt-2 mb-1"
                 />
