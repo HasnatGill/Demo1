@@ -17,6 +17,9 @@ function Show() {
                             <th>Main Category</th>
                             <th>Sub Category</th>
                         </tr>
+
+                        {/* Part of Map Api */}
+
                         {
                             Categories.map(item => {
                                 return (
@@ -49,7 +52,6 @@ function Show() {
                                 )
                             })
                         }
-
                     </table>
                 </div>
             </div>
