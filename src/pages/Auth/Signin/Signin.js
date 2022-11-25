@@ -1,27 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsFacebook } from "react-icons/bs";
 import { BsApple } from "react-icons/bs";
 import { SiNaver } from "react-icons/si";
 import { BsGoogle } from "react-icons/bs";
 import { RiKakaoTalkFill } from "react-icons/ri";
-import axios from "axios";
+import axios, { Axios } from "axios";
 
 const initialState = { email: "", password: "", first_name: "", last_name: "", middle_name: "" }
 
 function Signin() {
 
   const [state, setState] = useState(initialState)
-  const [loading, setLoading] = useState(false)
 
   const handleChange = e => {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
 
     e.preventDefault()
 
     let { email, password, first_name, last_name, middle_name } = state
+
+    var formData = new FormData(e.preventDefault());
+    formData.append("email", email);
+    formData.append("password", password);
+    formData.append("first_name", first_name);
+    formData.append("last_name", last_name);
+    formData.append("middle_name", middle_name);
+    formData.append("type", "register");
+
+
 
     if (!first_name) return window.notify("Enter Your First Name", "warning")
     if (!last_name) return window.notify("Enter Your Last Name", "warning")
@@ -30,32 +39,35 @@ function Signin() {
     if (!password) return window.notify("Enter Your Password", "warning")
 
 
-    setLoading(true)
-
-    let type = "register"
 
     try {
-      axios.post('http://bookdarak.com/api/api.php/Posts', {
-        email,
-        password,
-        last_name,
-        first_name,
-        last_name,
-        middle_name,
-        type,
-            
-      })
-        .then((res) => {
-          console.log(res);
-        })
+      let { data } = await axios.post(
+        "http://bookdarak.com/api/api.php",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      console.log("Success!", data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-      window.notify("Your is Register Successfully", "success")
-      setLoading(false)
+  const getAllData = async () => {
+    try {
+      const data = await axios.get("http://bookdarak.com/api/api.php/");
+      console.log(data.data);
+    } catch (error) {
+      console.log(error);
     }
-    catch (error) {
-      console.log(error)
-    }
-  }
+  };
+
+  useEffect(() => {
+    getAllData();
+  }, []);
 
 
   return (
@@ -170,13 +182,8 @@ function Signin() {
                 </div>
                 <div className="row m-0 p-0 text-center">
                   <div className="col-12 my-1">
-                    <button className="Botton w-75 py-1" disabled={loading
-                    } onClick={handleSubmit}>
-                      {
-                        !loading
-                          ? "Sign Up"
-                          : <div className="spinner-border spinner-border-sm"></div>
-                      }
+                    <button className="Botton w-75 py-1" onClick={handleSubmit}>
+                      Sign Up
                     </button>
                   </div>
                   <div className="col-12">
