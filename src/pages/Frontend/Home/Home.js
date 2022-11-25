@@ -33,6 +33,9 @@ function Home() {
           </div>
         </div>
       </div>
+
+      {/* Part of carousel */}
+
       <div className="container my-5">
         <div className="mt-5 position-relative">
           <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="false">
@@ -266,6 +269,7 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* The Part of carousel */}
     </>
   );
 }
