@@ -7,7 +7,8 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import axios from "axios";
 
 
-const initialState = { email: "", password: "", first_name: "", last_name: "", middle_name: "", type: "" }
+const initialState = { email: "", password: "", first_name: "", last_name: "", middle_name: "" }
+
 
 function Signin() {
 
@@ -18,32 +19,38 @@ function Signin() {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
   }
 
-
   const handleSubmit = (e) => {
+
+
     e.preventDefault()
+
+    let { email, password, first_name, last_name, middle_name } = state
+
+    if (!first_name) return window.notify("Enter Your First Name", "warning")
+    if (!last_name) return window.notify("Enter Your Last Name", "warning")
+    if (!middle_name) return window.notify("Enter Your Middle", "warning")
+    if (!email) return window.notify("Enter Your Email", "warning")
+    if (!password) return window.notify("Enter Your Password", "warning")
+
     setLoading(true)
-    // const data = {
-    //   ...state
-    // };
-    // let type = "register"
-    // let { email, password, first_name, middle_name, last_name,type } = state
-    e.preventDefault()
-    axios.post(`http://bookdarak.com/api/api.php`, {
-      email: state.email,
-      password: state.password,
-      last_name: state.last_name,
-      middle_name: state.middle_name,
-      first_name: state.first_name,
-      type: state.type,
-    })
-      .then(res => {
+    let type = "register"
+    try {
+      axios.post('http://bookdarak.com/api/api.php', {
+        email,
+        password,
+        last_name,
+        first_name,
+        last_name,
+        middle_name,
+        type,
+      }).then((res) => {
         console.log(res);
-        setLoading(false)
-        console.log(state.email, state.password, state.last_name, state.middle_name, state.first_name, state.type)
       })
-      .catch(error => {
-        console.log(error)
-      })
+      window.notify("Your is Register Successfully", "success")
+      setLoading(false)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
 
@@ -141,7 +148,7 @@ function Signin() {
                     />
                   </div>
                 </div>
-                <div className="row m-0 p-0">
+                {/* <div className="row m-0 p-0">
                   <div className="col">
                     <label className="fw-bold">Type</label>
                     <select name="type" className="inputtext my-2 form-control" onChange={handleChange}>
@@ -150,7 +157,7 @@ function Signin() {
                       <option value="Login">Login</option>
                     </select>
                   </div>
-                </div>
+                </div> */}
                 <div className="row m-0 p-0">
                   <div className="col">
                     <a href="#" className="Froget">
