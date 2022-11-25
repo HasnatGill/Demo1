@@ -9,7 +9,6 @@ import axios from "axios";
 
 const initialState = { email: "", password: "", first_name: "", last_name: "", middle_name: "" }
 
-
 function Signin() {
 
   const [state, setState] = useState(initialState)
@@ -49,7 +48,7 @@ function Signin() {
         .then((res) => {
           console.log(res);
         })
-        
+
       window.notify("Your is Register Successfully", "success")
       setLoading(false)
     }
