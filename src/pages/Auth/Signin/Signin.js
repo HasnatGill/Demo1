@@ -21,7 +21,6 @@ function Signin() {
 
   const handleSubmit = (e) => {
 
-
     e.preventDefault()
 
     let { email, password, first_name, last_name, middle_name } = state
@@ -32,8 +31,11 @@ function Signin() {
     if (!email) return window.notify("Enter Your Email", "warning")
     if (!password) return window.notify("Enter Your Password", "warning")
 
+
     setLoading(true)
+
     let type = "register"
+
     try {
       axios.post('http://bookdarak.com/api/api.php', {
         email,
@@ -43,12 +45,14 @@ function Signin() {
         last_name,
         middle_name,
         type,
-      }).then((res) => {
-        console.log(res);
       })
+        .then((res) => {
+          console.log(res);
+        })
       window.notify("Your is Register Successfully", "success")
       setLoading(false)
-    } catch (error) {
+    }
+    catch (error) {
       console.log(error)
     }
   }
@@ -148,16 +152,6 @@ function Signin() {
                     />
                   </div>
                 </div>
-                {/* <div className="row m-0 p-0">
-                  <div className="col">
-                    <label className="fw-bold">Type</label>
-                    <select name="type" className="inputtext my-2 form-control" onChange={handleChange}>
-                      <option defaultValue="">Choose the Type</option>
-                      <option value="register">Register</option>
-                      <option value="Login">Login</option>
-                    </select>
-                  </div>
-                </div> */}
                 <div className="row m-0 p-0">
                   <div className="col">
                     <a href="#" className="Froget">

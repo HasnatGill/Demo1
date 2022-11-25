@@ -4,7 +4,8 @@ window.notify = (msg, type) => {
 
     const option = {
         position: "bottom-right",
-        autoClose: 3000,
+        autoClose: 1000,
+        
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
