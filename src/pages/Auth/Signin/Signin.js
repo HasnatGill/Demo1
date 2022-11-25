@@ -6,7 +6,6 @@ import { BsGoogle } from "react-icons/bs";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import axios from "axios";
 
-
 const initialState = { email: "", password: "", first_name: "", last_name: "", middle_name: "" }
 
 function Signin() {
