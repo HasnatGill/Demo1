@@ -49,6 +49,7 @@ function Signin() {
         .then((res) => {
           console.log(res);
         })
+        
       window.notify("Your is Register Successfully", "success")
       setLoading(false)
     }
