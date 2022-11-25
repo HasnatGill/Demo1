@@ -35,7 +35,7 @@ function Signin() {
     let type = "register"
 
     try {
-      axios.post('http://bookdarak.com/api/api.php', {
+      axios.post('http://bookdarak.com/api/api.php/Posts', {
         email,
         password,
         last_name,
@@ -43,6 +43,7 @@ function Signin() {
         last_name,
         middle_name,
         type,
+            
       })
         .then((res) => {
           console.log(res);
@@ -61,7 +62,7 @@ function Signin() {
     <div className="Sign-page">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-sm-10 offset-sm-2 col-md-8 offset-md-4 col-lg-6 offset-lg-3">
+          <div className="col-12 col-sm-10 offset-sm-2 col-md-7 offset-md-4 col-lg-4 offset-lg-4">
             <div className="card mt-5 mb-5">
               <div className="header">
                 <h3 className="mt-2">Let's Go</h3>
@@ -156,7 +157,7 @@ function Signin() {
                     <a href="#" className="Froget">
                       Forget your password?
                     </a>
-                  </div> 
+                  </div>
                 </div>
                 <div className="row m-0 p-0  ">
                   <div className="col checkbox" >
