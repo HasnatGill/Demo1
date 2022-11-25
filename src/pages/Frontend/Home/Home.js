@@ -11,6 +11,9 @@ function Home() {
     <>
       <Header />
       <div className="home">
+
+        {/* Part of Header Home Page */}
+
         <div className="toppart bg-img text-white d-flex justify-content-center flex-column">
           <div className="container">
             <div className="row">
