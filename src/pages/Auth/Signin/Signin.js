@@ -157,7 +157,7 @@ function Signin() {
                     <a href="#" className="Froget">
                       Forget your password?
                     </a>
-                  </div>
+                  </div> 
                 </div>
                 <div className="row m-0 p-0  ">
                   <div className="col checkbox" >
