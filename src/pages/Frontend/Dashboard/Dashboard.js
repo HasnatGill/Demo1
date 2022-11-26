@@ -6,6 +6,100 @@ import { Th, Tr, Thead, Table, Td, Tbody } from 'react-super-responsive-table'
 import { TbArrowsDownUp } from 'react-icons/tb'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { BsPencil } from 'react-icons/bs'
+import York from '../../../pics/York.jpg';
+
+let ProductData = [
+    {
+        id: "0",
+        title: "Status of Liberty",
+        img: require("../../../pics/York.jpg"),
+        status: "Pending",
+        ID: "ID123",
+        payment: "$250.00",
+        Category: "Hotel"
+    },
+    {
+        id: "1",
+        title: "Center Park New York",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID456",
+        payment: "$300.00",
+        Category: "Ticket/Pass"
+    },
+    {
+        id: "2",
+        title: "Museum of Modern Art",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID0789",
+        payment: "$890.00",
+        Category: "Snapshot"
+    },
+    {
+        id: "3",
+        title: "Metropolitan Museum Art",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID147",
+        payment: "$330.00",
+        Category: "Ticket/Pass"
+    },
+    {
+        id: "4",
+        title: "The Lion King",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID0258",
+        payment: "$650.00",
+        Category: "Musical/Show"
+    },
+    {
+        id: "5",
+        title: "Dear Evan Hanson",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID0963",
+        payment: "$390.00",
+        Category: "Hotel/B&B"
+    },
+    {
+        id: "6",
+        title: "Aladdin",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID7563",
+        payment: "$780.00",
+        Category: "Taxi/shuttle"
+    },
+    {
+        id: "7",
+        title: "Harry Potter Cursed child",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID7896",
+        payment: "$450.00",
+        Category: "Sim card"
+    },
+    {
+        id: "8",
+        title: "Hiking Tour Guide",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID159",
+        payment: "$550.00",
+        Category: "Guided Tour"
+    },
+    {
+        id: "9",
+        title: "New York Museum of Art",
+        img: require("../../../pics/York.jpg"),
+        status: "Complete",
+        ID: "ID268",
+        payment: "$300.00",
+        Category: "Taxi/Shuttle"
+    },
+]
 
 function Dashboard() {
     return (
@@ -40,7 +134,7 @@ function Dashboard() {
                                         <Table>
                                             <Thead>
                                                 <Tr>
-                                                    <Th>ID</Th>
+                                                    <Th><input type="checkbox" className='me-3' />ID</Th>
                                                     <Th>Payment <TbArrowsDownUp /></Th>
                                                     <Th>Category</Th>
                                                     <Th>Product Title</Th>
@@ -48,20 +142,40 @@ function Dashboard() {
                                                     <Th>Actions</Th>
                                                 </Tr>
                                             </Thead>
-                                            <Tbody>
+                                            <Tbody >
                                                 <Tr>
-                                                    <Td>ID254</Td>
-                                                    <Td>$302.00</Td>
-                                                    <Td>Ticket/Pass</Td>
-                                                    <Td>Center Park New York</Td>
-                                                    <Td>Complete</Td>
+                                                    <Td><button className='my-1 px-4 rounded-3'>ID</button></Td>
+                                                    <Td></Td>
+                                                    <Td><select className='py-1 px-4 rounded-3 '>
+                                                        <option value="">Category</option>
+                                                    </select></Td>
+                                                    <Td><input type="text" className='py-1  px-3 rounded-2 ' placeholder='All' /></Td>
                                                     <Td>
-                                                        <button>View</button>
-                                                        <button><BsPencil /> </button>
-                                                        <button><RiDeleteBin6Line /></button>
+                                                        <select className='py-1 px-3 rounded-2'>
+                                                            <option value="">All</option>
+                                                        </select>
                                                     </Td>
                                                 </Tr>
-
+                                                {
+                                                    ProductData.map((item, i) => {
+                                                        return (
+                                                            
+                                                                <Tr key={i}>
+                                                                    <Td><input type="checkbox" className='me-2' />{item.ID}</Td>
+                                                                    <Td>{item.payment}</Td>
+                                                                    <Td>{item.Category}</Td>
+                                                                    <Td><img src={item.img} className='me-3 rounded-2' width={40} height={40} />{item.title}</Td>
+                                                                    <Td>{item.status}</Td>
+                                                                    <Td>
+                                                                        <button className='me-2 py-1 px-2'>View</button>
+                                                                        <button className='me-2 py-1 px-2'><BsPencil className='fs-6' /> </button>
+                                                                        <button className='py-1 px-2'><RiDeleteBin6Line className='fs-6' /></button>
+                                                                    </Td>
+                                                                </Tr>
+                                                          
+                                                        )
+                                                    })
+                                                }
                                             </Tbody>
                                         </Table>
                                     </div>
