@@ -1,0 +1,36 @@
+.DashBoardTopBar {
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+
+        .language {
+            margin: 0;
+        }
+
+        .icon {
+            margin: 0;
+        }
+
+        .Profile {
+            .profile {
+                width: 36px;
+                height: 36px;
+                border-radius: 50px;
+            }
+        }
+
+        .button {
+            button {
+
+                border: none;
+                background-color: orangered;
+                color: white;
+            }
+
+        }
+
+    }
+}
