@@ -21,38 +21,38 @@ function Sidebar() {
             <div className="header">
                 <img src={Logo} />
             </div>
-            <div className="listSection">
+            <div className="listSection mt-4">
                 <div className="DB">
-                    <h5><FiHome /> Dashboard </h5>
+                    <h6><FiHome className='mb-1 me-1' /> Dashboard </h6>
                 </div>
                 <div className="SPM">
                     <p>Schedule/product mange</p>
-                    <h5><BsTag /> Product</h5>
-                    <h5><FaRegCalendarAlt /> BnB Schedule</h5>
-                    <h5><FaRegCalendarAlt />  Schedule</h5>
+                    <h6><BsTag className='mb-1 me-1' /> Product</h6>
+                    <h6><FaRegCalendarAlt className='mb-1 me-1' /> BnB Schedule</h6>
+                    <h6><FaRegCalendarAlt className='mb-1 me-1' />  Schedule</h6>
                 </div>
                 <div className="Order">
                     <p>All order</p>
-                    <h5><GiStabbedNote /> All Order</h5>
+                    <h6><GiStabbedNote className='mb-1 me-1' /> All Order</h6>
                 </div>
                 <div className="SMM">
                     <p>Settlement mange</p>
-                    <h5><GiProcessor /> Process Status</h5>
-                    <h5><BiTimeFive /> Request history</h5>
+                    <h6><GiProcessor className='mb-1 me-1' /> Process Status</h6>
+                    <h6><BiTimeFive className='mb-1 me-1' /> Request history</h6>
                 </div>
                 <div className="AS">
                     <p>Account Setting</p>
-                    <h5><CgProfile /> Profile setting</h5>
-                    <h5><AiOutlineUser />  Settlement account</h5>
-                    <h5><AiOutlineSetting />  Account setting</h5>
-                    <h5><AiOutlineUnlock /> Change password</h5>
+                    <h6><CgProfile className='mb-1 me-1' /> Profile setting</h6>
+                    <h6><AiOutlineUser className='mb-1 me-1' />  Settlement account</h6>
+                    <h6><AiOutlineSetting className='mb-1 me-1' />  Account setting</h6>
+                    <h6><AiOutlineUnlock className='mb-1 me-1' /> Change password</h6>
                 </div>
                 <div className="AP">
                     <p>Athometrip policies</p>
-                    <h5><AiOutlineInfoCircle />  Terms and conditions</h5>
-                    <h5><TfiAnnouncement /> Announcement</h5>
-                    <h5><CgNotes /> Cancel/Refund policies</h5>
-                    <h5><AiOutlineQuestionCircle /> FAQ</h5>
+                    <h6><AiOutlineInfoCircle className='mb-1 me-1' />  Terms and conditions</h6>
+                    <h6><TfiAnnouncement className='mb-1 me-1' /> Announcement</h6>
+                    <h6><CgNotes className='mb-1 me-1' /> Cancel/Refund policies</h6>
+                    <h6><AiOutlineQuestionCircle className='mb-1 me-1' /> FAQ</h6>
                 </div>
             </div>
         </div>
