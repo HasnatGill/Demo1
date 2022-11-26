@@ -3,4 +3,53 @@
         background-color: rgba(47, 45, 45, 0.894);
         color: rgba(247, 247, 247, 0.887);
     }
+
+    .container {
+        .header {
+
+            .left {
+                float: left;
+                text-align: left;
+
+                span {
+                    color: rgb(91, 91, 91);
+                }
+            }
+
+            .right {
+                float: right;
+                text-align: right;
+
+                button {
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .table {
+        .container {
+            Table {
+                width: 100%;
+
+                Thead {
+                    Tr {
+                        Th {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                Tbody {
+                    Tr {
+                        Td {
+                            text-align: center;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
