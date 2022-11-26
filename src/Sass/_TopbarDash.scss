@@ -1,36 +1,54 @@
 .DashBoardTopBar {
-    .left {
-        float: left;
-    }
+    background-color: white;
 
-    .right {
-        float: right;
+    .container {
 
-        .language {
-            margin: 0;
+        .left {
+            float: left;
         }
 
-        .icon {
-            margin: 0;
-        }
+        .right {
+            float: right;
+            display: flex;
 
-        .Profile {
-            .profile {
-                width: 36px;
-                height: 36px;
-                border-radius: 50px;
-            }
-        }
+            .language {
+                margin: 0;
 
-        .button {
-            button {
-
-                border: none;
-                background-color: orangered;
-                color: white;
+                select {
+                    margin-left: -2px;
+                    border: none;
+                    outline: none;
+                }
             }
 
-        }
+            .icon {
+                margin: 0;
 
+                .bg-warning {
+                    background-color: orangered;
+                }
+            }
+
+            .Profile {
+                display: flex;
+
+                .profile {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                }
+            }
+
+            .button {
+                button {
+
+                    border: none;
+                    background-color: orangered;
+                    color: white;
+                }
+
+            }
+
+        }
     }
 }
