@@ -7,6 +7,7 @@ import { TbArrowsDownUp } from 'react-icons/tb'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { BsPencil } from 'react-icons/bs'
 import { AiOutlineRight } from 'react-icons/ai'
+import Footer from '../../component/DashFooter'
 
 let ProductData = [
     {
@@ -108,7 +109,7 @@ function Dashboard() {
                 <div className="col-2 SidebarSection">
                     <Sidebar />
                 </div>
-                <div className="col-10 ">
+                <div className="col-10">
                     <div className="row sticky-top">
                         <div className="col">
                             <TopBar />
@@ -208,9 +209,9 @@ function Dashboard() {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row mt-5">
                         <div className="col">
-                            <h1>Footer</h1>
+                            <Footer />
                         </div>
                     </div>
                 </div>
