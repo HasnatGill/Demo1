@@ -196,7 +196,7 @@ function Dashboard() {
                                         </div>
                                         <div className="right">
                                             <ul>
-                                                <li><button className='py-2 px-3 bgWarning rounded-2 me-1 border-0'>1</button></li>
+                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>1</button></li>
                                                 <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>2</button></li>
                                                 <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>3</button></li>
                                                 <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>4</button></li>

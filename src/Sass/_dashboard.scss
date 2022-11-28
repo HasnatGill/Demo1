@@ -23,12 +23,14 @@
                     li {
                         display: inline;
 
-                        .bgWarning {
+                       
+
+                        .bgDark {
+                            background-color: rgb(203, 203, 203);
+                        }
+                        .bgDark:focus {
                             background-color: orangered;
                             color: white;
-                        }
-                        .bgDark{
-                            background-color: rgb(203, 203, 203);
                         }
                     }
                 }
