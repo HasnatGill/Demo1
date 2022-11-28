@@ -6,6 +6,7 @@ import { Th, Tr, Thead, Table, Td, Tbody } from 'react-super-responsive-table'
 import { TbArrowsDownUp } from 'react-icons/tb'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { BsPencil } from 'react-icons/bs'
+import { AiOutlineRight } from 'react-icons/ai'
 
 let ProductData = [
     {
@@ -183,26 +184,33 @@ function Dashboard() {
                         </div>
                         <div className="row mt-4 px-4">
                             <div className="col">
-                                <div className="container">
-                                    <div className="left d-flex">
-                                        <select className='py-1 px-4 rounded-3'>
-                                            <option value="">10</option>
-                                            <option value="">11</option>
-                                        </select>
-                                        <h5 className='mt-1 ms-2'>of 125</h5>
-                                    </div>
-                                    <div className="right text-right d-flex">
-                                       <ul className='float-right'>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#"></a></li>
-                                       </ul>
+                                <div className="container Footer">
+                                    <div className="footer">
+                                        <div className="left d-flex">
+                                            <select className='py-1 px-4 rounded-3'>
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <h5 className='mt-1 ms-2'>of 125</h5>
+                                        </div>
+                                        <div className="right">
+                                            <ul>
+                                                <li><button className='py-2 px-3 bgWarning rounded-2 me-1 border-0'>1</button></li>
+                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>2</button></li>
+                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>3</button></li>
+                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>4</button></li>
+                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>5</button></li>
+                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'><AiOutlineRight /></button></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <h1>Footer</h1>
                         </div>
                     </div>
                 </div>

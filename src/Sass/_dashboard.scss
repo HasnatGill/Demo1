@@ -4,8 +4,38 @@
         color: rgba(247, 247, 247, 0.887);
     }
 
+    .Footer {
+        .footer {
+            .left {
+                float: left;
+                text-align: left;
 
- 
+            }
+
+            .right {
+
+                float: right;
+                text-align: right;
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        display: inline;
+
+                        .bgWarning {
+                            background-color: orangered;
+                            color: white;
+                        }
+                        .bgDark{
+                            background-color: rgb(203, 203, 203);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
     .container {
         .header {
