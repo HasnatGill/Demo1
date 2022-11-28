@@ -6,7 +6,6 @@ import { Th, Tr, Thead, Table, Td, Tbody } from 'react-super-responsive-table'
 import { TbArrowsDownUp } from 'react-icons/tb'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { BsPencil } from 'react-icons/bs'
-import York from '../../../pics/York.jpg';
 
 let ProductData = [
     {
@@ -31,7 +30,7 @@ let ProductData = [
         id: "2",
         title: "Museum of Modern Art",
         img: require("../../../pics/York.jpg"),
-        status: "Complete",
+        status: "Waiting Payment",
         ID: "ID0789",
         payment: "$890.00",
         Category: "Snapshot"
@@ -40,7 +39,7 @@ let ProductData = [
         id: "3",
         title: "Metropolitan Museum Art",
         img: require("../../../pics/York.jpg"),
-        status: "Complete",
+        status: "Processing",
         ID: "ID147",
         payment: "$330.00",
         Category: "Ticket/Pass"
@@ -58,7 +57,7 @@ let ProductData = [
         id: "5",
         title: "Dear Evan Hanson",
         img: require("../../../pics/York.jpg"),
-        status: "Complete",
+        status: "Waiting payment",
         ID: "ID0963",
         payment: "$390.00",
         Category: "Hotel/B&B"
@@ -67,7 +66,7 @@ let ProductData = [
         id: "6",
         title: "Aladdin",
         img: require("../../../pics/York.jpg"),
-        status: "Complete",
+        status: "Processing",
         ID: "ID7563",
         payment: "$780.00",
         Category: "Taxi/shuttle"
@@ -85,7 +84,7 @@ let ProductData = [
         id: "8",
         title: "Hiking Tour Guide",
         img: require("../../../pics/York.jpg"),
-        status: "Complete",
+        status: "Pending",
         ID: "ID159",
         payment: "$550.00",
         Category: "Guided Tour"
@@ -127,10 +126,10 @@ function Dashboard() {
                                 </div>
                             </div>
                         </div>
-                        <div className="row mt-5 px-4">
+                        <div className="row mt-5 ">
                             <div className="col">
-                                <div className="table ">
-                                    <div className="container">
+                                <div className="table">
+                                    <div className="container px-2">
                                         <Table>
                                             <Thead>
                                                 <Tr>
@@ -139,7 +138,7 @@ function Dashboard() {
                                                     <Th>Category</Th>
                                                     <Th>Product Title</Th>
                                                     <Th>Status</Th>
-                                                    <Th>Actions</Th>
+                                                    <Th><div className='text-end'>Actions</div></Th>
                                                 </Tr>
                                             </Thead>
                                             <Tbody >
@@ -149,9 +148,9 @@ function Dashboard() {
                                                     <Td><select className='py-1 px-4 rounded-3 '>
                                                         <option value="">Category</option>
                                                     </select></Td>
-                                                    <Td><input type="text" className='py-1  px-3 rounded-2 ' placeholder='All' /></Td>
+                                                    <Td><input type="text" className='py-1 rounded-2 form-control' placeholder='All' /></Td>
                                                     <Td>
-                                                        <select className='py-1 px-3 rounded-2'>
+                                                        <select className='py-1 px-4 ms-2 rounded-2'>
                                                             <option value="">All</option>
                                                         </select>
                                                     </Td>
@@ -159,25 +158,48 @@ function Dashboard() {
                                                 {
                                                     ProductData.map((item, i) => {
                                                         return (
-                                                            
-                                                                <Tr key={i}>
-                                                                    <Td><input type="checkbox" className='me-2' />{item.ID}</Td>
-                                                                    <Td>{item.payment}</Td>
-                                                                    <Td>{item.Category}</Td>
-                                                                    <Td><img src={item.img} className='me-3 rounded-2' width={40} height={40} />{item.title}</Td>
-                                                                    <Td>{item.status}</Td>
-                                                                    <Td>
-                                                                        <button className='me-2 py-1 px-2'>View</button>
-                                                                        <button className='me-2 py-1 px-2'><BsPencil className='fs-6' /> </button>
-                                                                        <button className='py-1 px-2'><RiDeleteBin6Line className='fs-6' /></button>
-                                                                    </Td>
-                                                                </Tr>
-                                                          
+
+                                                            <Tr key={i}>
+                                                                <Td><input type="checkbox" className='me-2' />{item.ID}</Td>
+                                                                <Td>{item.payment}</Td>
+                                                                <Td>{item.Category}</Td>
+                                                                <Td><img src={item.img} className='me-3 rounded-2' width={40} height={40} />{item.title}</Td>
+                                                                <Td>{item.status}</Td>
+                                                                <Td>
+                                                                    <div className='float-end '>  <button className='py-1 me-3 px-2'>View</button>
+                                                                        <button className='py-1 me-2 px-2'><BsPencil className='fs-6' /> </button>
+                                                                        <button className='py-1 px-2'><RiDeleteBin6Line className='fs-6' /></button></div>
+                                                                </Td>
+                                                            </Tr>
+
                                                         )
                                                     })
                                                 }
                                             </Tbody>
                                         </Table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row mt-4 px-4">
+                            <div className="col">
+                                <div className="container">
+                                    <div className="left d-flex">
+                                        <select className='py-1 px-4 rounded-3'>
+                                            <option value="">10</option>
+                                            <option value="">11</option>
+                                        </select>
+                                        <h5 className='mt-1 ms-2'>of 125</h5>
+                                    </div>
+                                    <div className="right text-right d-flex">
+                                       <ul className='float-right'>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#"></a></li>
+                                       </ul>
                                     </div>
                                 </div>
                             </div>
