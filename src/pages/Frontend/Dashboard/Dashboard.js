@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TopBar from '../../component/DashTopBar'
 import Sidebar from '../../component/sideBar'
 import { AiOutlinePlus } from 'react-icons/ai'
@@ -101,117 +101,136 @@ let ProductData = [
         Category: "Taxi/Shuttle"
     },
 ]
- 
+
 function Dashboard() {
+
+
+    const [fix, setFix] = useState(false)
+
+    const leave = () => {
+        setFix(false)
+    }
+
+    const hover = () => {
+        setFix(true)
+    }
+
+
     return (
         <div className="Dashboard">
             <div className="row m-0 p-0">
                 <div className="col-2 SidebarSection">
                     <Sidebar />
                 </div>
-                <div className="col-10">
+                <div className="col-10 ">
+                    <div className={`scroll ${fix ? '' : 'position-fixed'}`}
+                        onMouseEnter={hover}
+                        onMouseLeave={leave}
+                    >
                     <div className="row sticky-top">
                         <div className="col">
                             <TopBar />
                         </div>
                     </div>
-                    <div className="row mt-5 px-5">
-                        <div className="col">
-                            <div className="container">
-                                <div className="header">
-                                    <div className="left">
-                                        <h5>All Product: <span>252</span></h5>
-                                    </div>
-                                    <div className="right">
-                                        <button className='py-1 px-3'><AiOutlinePlus /> Create new product</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row mt-5 ">
-                            <div className="col">
-                                <div className="table">
-                                    <div className="container px-2">
-                                        <Table>
-                                            <Thead>
-                                                <Tr>
-                                                    <Th><input type="checkbox" className='me-3' />ID</Th>
-                                                    <Th>Payment <TbArrowsDownUp /></Th>
-                                                    <Th>Category</Th>
-                                                    <Th>Product Title</Th>
-                                                    <Th>Status</Th>
-                                                    <Th><div className='text-end'>Actions</div></Th>
-                                                </Tr>
-                                            </Thead>
-                                            <Tbody >
-                                                <Tr>
-                                                    <Td><button className='my-1 px-4 rounded-3'>ID</button></Td>
-                                                    <Td></Td>
-                                                    <Td><select className='py-1 px-4 rounded-3 '>
-                                                        <option value="">Category</option>
-                                                    </select></Td>
-                                                    <Td><input type="text" className='py-1 rounded-2 form-control' placeholder='All' /></Td>
-                                                    <Td>
-                                                        <select className='py-1 px-4 ms-2 rounded-2'>
-                                                            <option value="">All</option>
-                                                        </select>
-                                                    </Td>
-                                                </Tr>
-                                                {
-                                                    ProductData.map((item, i) => {
-                                                        return (
 
-                                                            <Tr key={i}>
-                                                                <Td><input type="checkbox" className='me-2' />{item.ID}</Td>
-                                                                <Td>{item.payment}</Td>
-                                                                <Td>{item.Category}</Td>
-                                                                <Td><img src={item.img} className='me-3 rounded-2' width={40} height={40} />{item.title}</Td>
-                                                                <Td>{item.status}</Td>
-                                                                <Td>
-                                                                    <div className='float-end '>  <button className='py-1 me-3 px-2'>View</button>
-                                                                        <button className='py-1 me-2 px-2'><BsPencil className='fs-6' /> </button>
-                                                                        <button className='py-1 px-2'><RiDeleteBin6Line className='fs-6' /></button></div>
-                                                                </Td>
-                                                            </Tr>
-
-                                                        )
-                                                    })
-                                                }
-                                            </Tbody>
-                                        </Table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row mt-4 px-4">
+                        <div className="row mt-5 px-5">
                             <div className="col">
-                                <div className="container Footer">
-                                    <div className="footer">
-                                        <div className="left d-flex">
-                                            <select className='py-1 px-4 rounded-3'>
-                                                <option value="">10</option>
-                                                <option value="">11</option>
-                                            </select>
-                                            <h5 className='mt-1 ms-2'>of 125</h5>
+                                <div className="container">
+                                    <div className="header">
+                                        <div className="left">
+                                            <h5>All Product: <span>252</span></h5>
                                         </div>
                                         <div className="right">
-                                            <ul>
-                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>1</button></li>
-                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>2</button></li>
-                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>3</button></li>
-                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>4</button></li>
-                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>5</button></li>
-                                                <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'><AiOutlineRight /></button></li>
-                                            </ul>
+                                            <button className='py-1 px-3'><AiOutlinePlus /> Create new product</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row mt-5 ">
+                                <div className="col">
+                                    <div className="table">
+                                        <div className="container px-2">
+                                            <Table>
+                                                <Thead>
+                                                    <Tr>
+                                                        <Th><input type="checkbox" className='me-3' />ID</Th>
+                                                        <Th>Payment <TbArrowsDownUp /></Th>
+                                                        <Th>Category</Th>
+                                                        <Th>Product Title</Th>
+                                                        <Th>Status</Th>
+                                                        <Th><div className='text-end'>Actions</div></Th>
+                                                    </Tr>
+                                                </Thead>
+                                                <Tbody >
+                                                    <Tr>
+                                                        <Td><button className='my-1 px-4 rounded-3'>ID</button></Td>
+                                                        <Td></Td>
+                                                        <Td><select className='py-1 px-4 rounded-3 '>
+                                                            <option value="">Category</option>
+                                                        </select></Td>
+                                                        <Td><input type="text" className='py-1 rounded-2 form-control' placeholder='All' /></Td>
+                                                        <Td>
+                                                            <select className='py-1 px-4 ms-2 rounded-2'>
+                                                                <option value="">All</option>
+                                                            </select>
+                                                        </Td>
+                                                    </Tr>
+                                                    {
+                                                        ProductData.map((item, i) => {
+                                                            return (
+
+                                                                <Tr key={i}>
+                                                                    <Td><input type="checkbox" className='me-2' />{item.ID}</Td>
+                                                                    <Td>{item.payment}</Td>
+                                                                    <Td>{item.Category}</Td>
+                                                                    <Td><img src={item.img} className='me-3 rounded-2' width={40} height={40} />{item.title}</Td>
+                                                                    <Td>{item.status}</Td>
+                                                                    <Td>
+                                                                        <div className='float-end '>  <button className='py-1 me-3 px-2'>View</button>
+                                                                            <button className='py-1 me-2 px-2'><BsPencil className='fs-6' /> </button>
+                                                                            <button className='py-1 px-2'><RiDeleteBin6Line className='fs-6' /></button></div>
+                                                                    </Td>
+                                                                </Tr>
+
+                                                            )
+                                                        })
+                                                    }
+                                                </Tbody>
+                                            </Table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row mt-4 px-4">
+                                <div className="col">
+                                    <div className="container Footer">
+                                        <div className="footer">
+                                            <div className="left d-flex">
+                                                <select className='py-1 px-4 rounded-3'>
+                                                    <option value="">10</option>
+                                                    <option value="">11</option>
+                                                </select>
+                                                <h5 className='mt-1 ms-2'>of 125</h5>
+                                            </div>
+                                            <div className="right">
+                                                <ul>
+                                                    <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>1</button></li>
+                                                    <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>2</button></li>
+                                                    <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>3</button></li>
+                                                    <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>4</button></li>
+                                                    <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'>5</button></li>
+                                                    <li><button className='py-2 px-3 bgDark rounded-2 me-1 border-0'><AiOutlineRight /></button></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="row mt-5">
-                        <div className="col">
-                            <Footer />
+                        <div className="row mt-5">
+                            <div className="col">
+                                <Footer />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FiHome } from 'react-icons/fi'
 import { BsTag } from 'react-icons/bs'
 import { FaRegCalendarAlt } from 'react-icons/fa'
@@ -16,9 +16,24 @@ import { AiOutlineQuestionCircle } from 'react-icons/ai'
 import Logo from "../../../pics/logo.svg"
 
 function Sidebar() {
+
+    const [fix, setFix] = useState(false)
+
+    const leave = () => {
+        setFix(false)
+    }
+
+    const hover = () => {
+        setFix(true)
+    }
+
+
     return (
-        <div className="sidebar sticky-top ">
-            <div className="header">
+        <div className={`sidebar sticky-top m-0 p-0 ${fix ? '' : 'position-fixed'}`}
+            onMouseEnter={hover}
+            onMouseLeave={leave}
+        >
+            <div className="header bg-dark">
                 <img src={Logo} />
             </div>
             <div className="listSection mt-4">
@@ -60,3 +75,4 @@ function Sidebar() {
 }
 
 export default Sidebar
+
