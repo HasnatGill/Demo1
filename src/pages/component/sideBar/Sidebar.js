@@ -17,7 +17,7 @@ import Logo from "../../../pics/logo.svg"
 
 function Sidebar() {
     return (
-        <div className="sidebar">
+        <div className="sidebar sticky-top ">
             <div className="header">
                 <img src={Logo} />
             </div>
