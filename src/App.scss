@@ -8,6 +8,12 @@
 @import'./Sass/sidebar';
 @import'./Sass/TopbarDash';
 @import'./Sass/dashfooter';
+@import'./Sass/mainPage';
+
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 #root {
   display: flex;

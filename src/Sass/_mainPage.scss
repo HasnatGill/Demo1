@@ -1,0 +1,215 @@
+.MainPage {
+    .SideBar {
+        width: 16.66%;
+        float: left;
+    }
+
+    .ContentWidth {
+        width: 83.33%;
+        float: right;
+    }
+
+    .Main {
+        width: 83.33%;
+        float: right;
+    }
+}
+
+// This is SideBar Content Styling
+
+.width {
+    width: 16.66%;
+}
+
+.SideBarContent {
+    background-color: rgb(60, 60, 60);
+    color: rgb(213, 210, 210);
+
+
+    .Header {
+        padding: 10px 0px 10px 0px;
+
+        img {
+            padding: 10px 20px 10px 20px;
+        }
+    }
+
+    .ButtonList {
+        padding-top: 10px;
+
+        button {
+            border: none;
+            padding: 20px;
+            background-color: rgb(60, 60, 60);
+            color: white;
+            font-size: 18px;
+
+        }
+
+        p {
+            color: white;
+            padding-left: 10px;
+        }
+    }
+}
+
+
+// This is Top Bar Content Styling
+
+.TopBarContent {
+    margin-top: 10px;
+    background-color: white;
+
+    .container {
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+            display: flex;
+
+            .language {
+                select {
+                    margin-left: -2px;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            .icon {
+                margin: 0;
+            }
+
+            .Profile {
+                display: flex;
+
+                .profile {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                }
+            }
+
+            .button {
+                button {
+                    border: none;
+                    background-color: orangered;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+// This is Table Content Styling
+
+.TableContent {
+    .header {
+        padding: 5px 20px 5px 20px;
+
+        .left {
+            float: left;
+            text-align: left;
+
+            span {
+                color: rgb(91, 91, 91);
+            }
+        }
+
+        .right {
+            float: right;
+            text-align: right;
+
+            button {
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .Table {
+        table {
+            min-width: 100%;
+
+            // Thead {
+            //     border-bottom: 0.5px solid rgb(186, 185, 185);
+
+            tr {
+                th {
+                    padding-bottom: 10px;
+                }
+            }
+
+
+            // Tbody {
+            //     border: none;
+
+            tr {
+                border-bottom: 1px solid rgb(151, 151, 151);
+
+                td {
+                    padding: 10px 0px 10px 0px;
+
+                    button {
+                        border-radius: 5px;
+                        border: 0.5px solid rgb(164, 162, 162);
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .TableFooter {
+        .left {
+            float: left;
+            text-align: left;
+
+        }
+
+        .right {
+
+            float: right;
+            text-align: right;
+
+            ul {
+                list-style: none;
+
+                li {
+                    display: inline;
+
+
+
+                    .bgDark {
+                        background-color: rgb(203, 203, 203);
+                    }
+
+                    .bgDark:focus {
+                        background-color: orangered;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// This is Bottom Page content Styling
+
+
+.PageFooter {
+    background-color: rgb(60, 60, 60);
+    color: rgb(213, 210, 210);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // .Footer {
+    // }
+}

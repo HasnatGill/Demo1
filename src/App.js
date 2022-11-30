@@ -6,14 +6,16 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 // import Show from "./pages/Frontend/Showdata";
 // import SignUp from "./pages/Auth/Signin/SignUp";
 // import Signin from "./pages/Auth/Signin/Signin";
-import Dashboard from "./pages/Frontend/Dashboard"
+// import Dashboard from "./pages/Frontend/Dashboard"
+import Assignment from './pages/Frontend/Assignment'
 
 function App() {
   return (
     <>
       {/* <Home /> */}
       {/* <Signin /> */}
-      <Dashboard />
+      {/* <Dashboard /> */}
+      <Assignment />
       {/* <SignUp /> */}
       {/* <Show /> */}
       {/* <Api /> */}
