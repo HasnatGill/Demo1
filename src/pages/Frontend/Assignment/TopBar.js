@@ -23,7 +23,7 @@ function TopBar() {
               </div>
               <div className="icon mx-2 mt-2">
                 <AiOutlineBell className='fs-4 mb-1 ' />
-                <span className="translate-middle text-white badge rounded-pill bg-warning  px-1  start-100">
+                <span className="translate-middle text-white badge rounded-pill bgWarning  px-1  start-100">
                   1
                   <span className="visually-hidden">unread messages</span>
                 </span>

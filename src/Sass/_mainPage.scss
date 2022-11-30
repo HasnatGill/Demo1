@@ -79,6 +79,10 @@
 
             .icon {
                 margin: 0;
+
+                .bgWarning {
+                    background-color: orangered;
+                }
             }
 
             .Profile {
@@ -131,6 +135,8 @@
     }
 
     .Table {
+        overflow-x: scroll;
+
         table {
             min-width: 100%;
 
