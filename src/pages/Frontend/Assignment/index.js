@@ -3,9 +3,9 @@ import MainPage from './MainPage'
 
 function index() {
     return (
-        <div>
+        <>
             <MainPage />
-        </div>
+        </>
     )
 }
 
