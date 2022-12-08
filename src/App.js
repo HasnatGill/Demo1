@@ -7,7 +7,9 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 // import SignUp from "./pages/Auth/Signin/SignUp";
 // import Signin from "./pages/Auth/Signin/Signin";
 // import Dashboard from "./pages/Frontend/Dashboard"
-import Assignment from './pages/Frontend/Assignment'
+// import Assignment from './pages/Frontend/Assignment'
+// import Calendar from "./pages/Frontend/Calendar";
+import AddButton from "./pages/Frontend/AddButton";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
       {/* <Home /> */}
       {/* <Signin /> */}
       {/* <Dashboard /> */}
-      <Assignment />
+      {/* <Assignment /> */}
+      {/* <Calendar/> */}
+      <AddButton/>
       {/* <SignUp /> */}
       {/* <Show /> */}
       {/* <Api /> */}
