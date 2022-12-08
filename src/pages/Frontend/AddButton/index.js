@@ -3,9 +3,9 @@ import AddDropDown from './AddDropDown'
 
 function index() {
     return (
-        <div>
+        <>
             <AddDropDown />
-        </div>
+        </>
     )
 }
 
