@@ -10,6 +10,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import Assignment from './pages/Frontend/Assignment'
 // import Calendar from "./pages/Frontend/Calendar";
 import AddButton from "./pages/Frontend/AddButton";
+import ToDo from "./pages/Frontend/Home/Todo";
 
 function App() {
   return (
@@ -17,12 +18,13 @@ function App() {
       {/* <Home /> */}
       {/* <Signin /> */}
       {/* <Dashboard /> */}
-      <Assignment />
+      {/* <Assignment /> */}
       {/* <Calendar/> */}
       {/* <AddButton/> */}
       {/* <SignUp /> */}
       {/* <Show /> */}
       {/* <Api /> */}
+      <ToDo/>
       <ToastContainer />
     </>
   );
