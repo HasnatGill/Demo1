@@ -14,7 +14,7 @@ import ToDo from "./pages/Frontend/Home/Todo";
 
 function App() {
   return (
-    <>
+    <div>
       {/* <Home /> */}
       {/* <Signin /> */}
       {/* <Dashboard /> */}
@@ -26,7 +26,7 @@ function App() {
       {/* <Api /> */}
       <ToDo/>
       <ToastContainer />
-    </>
+    </div>
   );
 }
 
