@@ -3,9 +3,9 @@ import Calendar from './Calendar'
 
 function index() {
     return (
-        <d>
+        <div>
             <Calendar />
-        </d>
+        </div>
     )
 }
 
