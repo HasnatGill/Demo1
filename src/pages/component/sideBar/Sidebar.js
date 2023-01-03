@@ -29,7 +29,7 @@ function Sidebar() {
 
 
     return (
-        <div className={`sidebar sticky-top m-0 p-0 ${fix ? '' : 'position-fixed'}`}
+        <div className={`sidebar ${fix ? '' : 'position-fixed sidebar'}`}
             onMouseEnter={hover}
             onMouseLeave={leave}
         >
