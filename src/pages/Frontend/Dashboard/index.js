@@ -3,9 +3,9 @@ import Dashboard from './Dashboard'
 
 function index() {
     return (
-        <>
+        <div>
             <Dashboard />
-        </>
+        </div>
     )
 }
 
