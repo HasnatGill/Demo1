@@ -9,7 +9,10 @@ import { MdOutlineTune } from 'react-icons/md'
 import { MdBusiness } from 'react-icons/md'
 import { TbArrowWaveRightUp } from 'react-icons/tb'
 import CountUp from 'react-countup';
-
+import { BsCheck2 } from 'react-icons/bs'
+import Personal from '../../../pics/Presonal.png'
+import { AiOutlinePlus } from 'react-icons/ai'
+import Company from '../../../pics/Company.png'
 
 const MainContant = [
     {
@@ -182,19 +185,73 @@ function Hero() {
             <div className="main_7">
                 <div className="container">
                     <div className="row">
-                        <div className="col-4">
+                        <div className="col-lg-4 col-md-6 col-sm-12">
                             <div className="card_1">
                                 <h5>NO HIDDEN FEES</h5>
                                 <h2>Simple <br /> pricing.</h2>
                                 <p>Offer valid on January 5, 2022 <br /> for a limited time only.</p>
                             </div>
                         </div>
-                        <div className="col-4">
-
+                        <div className="col-lg-4 col-md-6 col-sm-12">
+                            <div className="card_2">
+                                <img src={Personal} alt="Personal" width={75} height={75} />
+                                <h4>Personal</h4>
+                                <h1>$5</h1>
+                                <h6>Month</h6>
+                                <p>Get the current deal without <br /> any risk and additional fees.</p>
+                                <div><BsCheck2 className='ture me-2' /> Unlimited updates & products</div>
+                                <div><BsCheck2 className='ture me-2' /> Custom permissions</div>
+                                <div className='disable'><AiOutlinePlus className='false me-2' />Custom Infrastructure</div>
+                                <button>Get Started</button>
+                            </div>
                         </div>
-                        <div className="col-4">
-
+                        <div className="col-lg-4 col-md-12 col-sm-12">
+                            <div className="card_2">
+                                <img src={Company} alt="Personal" width={75} height={75} />
+                                <h4>Company</h4>
+                                <h1>$35</h1>
+                                <h6>Month</h6>
+                                <p>Get the current deal without <br /> any risk and additional fees.</p>
+                                <div><BsCheck2 className='ture me-2' /> Unlimited updates & products</div>
+                                <div><BsCheck2 className='ture me-2' /> Custom permissions</div>
+                                <div><BsCheck2 className='ture me-2' />Custom Infrastructure</div>
+                                <button>Get Started</button>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="main_8">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4 col-sm-12">
+                            <div className="text_1">
+                                <div>GET HLEP (HLEP CENTER)</div>
+                                <h2>Frequently asking questions.</h2>
+                            </div>
+                        </div>
+                        <div className="col-lg-8 col-sm-12">
+                            <div className="text_2">
+                                <h6><AiOutlinePlus className='plus me-2' />How does the 14-day trial work? </h6>
+                                <h6><AiOutlinePlus className='plus me-2' />How do I pay for your service? </h6>
+                                <h6><AiOutlinePlus className='plus me-2' />How can I cancel Subscription? </h6>
+                                <h6><AiOutlinePlus className='plus me-2' />Can I recover an expired account? </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="main_9">
+                <div className="card_1">
+                    <div className="text">
+                        <h2><CountUp start={0} end={28} duration={1} />+</h2>
+                        <p>designers and <br /> developers</p>
+                    </div>
+                </div>
+                <div className="card_2">
+                    <div className="text">
+                        <h2><CountUp start={0} end={345} duration={1} />+</h2>
+                        <p>awards for digital <br /> innovation</p>
                     </div>
                 </div>
             </div>

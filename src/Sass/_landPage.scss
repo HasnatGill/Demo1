@@ -252,12 +252,14 @@
 
 .main_7 {
     background-color: #341d74;
-    min-height: 90vh;
+    min-height: 70vh;
 
     .container {
-          margin-top: 20px;
+        margin-top: 40px;
+
         .card_1 {
             padding: 15px;
+            margin-top: 20px;
 
             h5 {
                 color: #f39d8f;
@@ -277,6 +279,167 @@
                 padding-left: 17px;
                 color: #ffffff;
                 font-size: 16px;
+            }
+        }
+
+        .card_2 {
+            padding: 15px;
+
+            color: white;
+            margin-top: 20px;
+
+            h4 {
+                margin-top: 10px;
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 70px;
+            }
+
+            h6 {
+                background-color: #433763;
+                padding: 3px;
+                text-align: center;
+                border: none;
+                border-radius: 4px;
+                width: 18%;
+            }
+
+            div {
+                margin-bottom: 5px;
+
+                .ture {
+                    color: green;
+                }
+            }
+
+            .disable {
+                color: rgba(255, 255, 255, 0.545);
+
+                .false {
+                    color: rgba(255, 0, 0, 0.821);
+                    transform: rotate(45deg);
+                }
+            }
+
+            button {
+                border: none;
+                background-color: black;
+                color: white;
+                font-size: 18px;
+                padding: 10px 15px 10px 15px;
+                margin-top: 10px;
+                border-radius: 6px;
+            }
+
+            button:hover {
+                border: none;
+                background-color: rgb(201, 141, 141);
+                color: rgb(255, 255, 255);
+                font-size: 18px;
+                padding: 10px 15px 10px 15px;
+                margin-top: 10px;
+                border-radius: 6px;
+            }
+
+        }
+    }
+}
+
+
+.main_8 {
+    background-color: #2d1966;
+    color: white;
+    min-height: 45vh;
+    margin-top: -10px;
+
+    .container {
+        margin-top: 10px;
+
+        .text_1 {
+            margin-top: 40px;
+
+            div {
+                font-size: 17px;
+                color: #f39d8f;
+                font-weight: 400;
+            }
+
+            h2 {
+                font-size: 47px;
+                font-weight: 600;
+            }
+        }
+
+        .text_2 {
+            padding: 50px;
+            margin-left: 50px;
+
+            h6 {
+                font-size: 18px;
+                line-height: 30px;
+
+                .plus {
+                    color: #f39d8f;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.main_9 {
+    background: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcolabrio.ams3.cdn.digitaloceanspaces.com%2Fohio-demo-9%2Foh__img109.jpg") !important;
+    background-size: cover;
+    background: no-repeat;
+    min-height: 70vh;
+    position: relative;
+
+    .card_1 {
+        background-color: #392274;
+        width: 250px;
+        height: 150px;
+        position: absolute;
+        bottom: 0;
+        left: 200px;
+
+        .text {
+            h2 {
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            p {
+                color: white;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+
+    .card_2 {
+        background-color: #000000;
+        width: 250px;
+        height: 150px;
+        position: absolute;
+        bottom: 0;
+        left: 450px;
+
+        .text {
+            h2 {
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            p {
+                color: white;
+                font-size: 18px;
+                text-align: center;
             }
         }
     }
@@ -430,6 +593,103 @@
             }
         }
     }
+
+    .main_8 {
+        background-color: #2d1966;
+        color: white;
+        min-height: 45vh;
+        margin-top: -10px;
+
+        .container {
+            margin-top: 10px;
+
+            .text_1 {
+                margin-top: 20px;
+
+                div {
+                    font-size: 17px;
+                    color: #f39d8f;
+                    font-weight: 400;
+                }
+
+                h2 {
+                    font-size: 27px;
+                    font-weight: 600;
+                }
+            }
+
+            .text_2 {
+                padding: 50px;
+                margin-left: 50px;
+
+                h6 {
+                    font-size: 18px;
+                    line-height: 30px;
+
+                    .plus {
+                        color: #f39d8f;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .main_9 {
+        background: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcolabrio.ams3.cdn.digitaloceanspaces.com%2Fohio-demo-9%2Foh__img109.jpg") !important;
+        background-size: cover;
+        background: no-repeat;
+        min-height: 70vh;
+        position: relative;
+    
+        .card_1 {
+            background-color: #392274;
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            bottom: 0;
+    left: 0;
+            .text {
+                h2 {
+                    color: white;
+                    font-size: 50px;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+    
+                p {
+                    color: white;
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+    
+        .card_2 {
+            background-color: #000000;
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            bottom: 0;
+            left: 250px;
+    
+            .text {
+                h2 {
+                    color: white;
+                    font-size: 50px;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+    
+                p {
+                    color: white;
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
 }
 
 @media screen and (max-width: 470px) {
@@ -492,6 +752,103 @@
             }
         }
     }
+
+    .main_8 {
+        background-color: #2d1966;
+        color: white;
+        min-height: 45vh;
+        margin-top: -10px;
+
+        .container {
+            margin-top: 10px;
+
+            .text_1 {
+                margin-top: 20px;
+
+                div {
+                    font-size: 17px;
+                    color: #f39d8f;
+                    font-weight: 400;
+                }
+
+                h2 {
+                    font-size: 27px;
+                    font-weight: 600;
+                }
+            }
+
+            .text_2 {
+                width: 100%;
+                text-align: left;
+
+                h6 {
+                    font-size: 16px;
+                    line-height: 30px;
+
+                    .plus {
+                        color: #f39d8f;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .main_9 {
+        background: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcolabrio.ams3.cdn.digitaloceanspaces.com%2Fohio-demo-9%2Foh__img109.jpg") !important;
+        background-size: cover;
+        background: no-repeat;
+        min-height: 70vh;
+        position: relative;
+    
+        .card_1 {
+            background-color: #392274;
+            width: 150px;
+            height: 120px;
+            position: absolute;
+            bottom: 0;
+            left:0;
+    
+            .text {
+                h2 {
+                    color: white;
+                    font-size: 30px;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+    
+                p {
+                    color: white;
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+    
+        .card_2 {
+            background-color: #000000;
+            width: 150px;
+            height: 120px;
+            position: absolute;
+            bottom: 0;
+            left: 150px;
+    
+            .text {
+                h2 {
+                    color: white;
+                    font-size: 30px;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+    
+                p {
+                    color: white;
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
 }
 
 
