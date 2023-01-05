@@ -13,6 +13,9 @@ import { BsCheck2 } from 'react-icons/bs'
 import Personal from '../../../pics/Presonal.png'
 import { AiOutlinePlus } from 'react-icons/ai'
 import Company from '../../../pics/Company.png'
+import { AiOutlineArrowRight } from 'react-icons/ai'
+import Template from '../../../pics/template.png'
+import Logo from '../../../pics/logo.svg'
 
 const MainContant = [
     {
@@ -147,7 +150,7 @@ function Hero() {
                                 {
                                     ContantIcon.map((item, i) => {
                                         return (
-                                            <div key={i} className="col-lg-4 col-md-6 Icon_Contant">
+                                            <div key={i} className="col-lg-4 col-sm-4 col-md-6 Icon_Contant">
                                                 <div className="Icons">
                                                     <div >{item.icon}</div>
                                                     <h5>{item.title}</h5>
@@ -252,6 +255,107 @@ function Hero() {
                     <div className="text">
                         <h2><CountUp start={0} end={345} duration={1} />+</h2>
                         <p>awards for digital <br /> innovation</p>
+                    </div>
+                </div>
+            </div>
+            <div className="main_10">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
+                            <div className="text_1">
+                                <div className='subtitle'>REVIEWS</div>
+                                <h2>What <br /> people said.</h2>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
+                            <div className="text_2">
+                                <div className='title'>Customer Support</div>
+                                <p>"It's totally customizable with the theme settings, its compatible with a tonne of important plugins and the support is outstanding."</p>
+                                <h6>Alex Regelman</h6>
+                                <p>co-founder,colabrio</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-12 col-sm-12 mb-5">
+                            <div className="text_2">
+                                <div className='title'>Code Quality</div>
+                                <p>"5 stars design agency! if anyone wants an example of what you can do with this theme, check out my site at ohio.clbthemes.com"</p>
+                                <h6>Stacey Rickson</h6>
+                                <p>Project Manger,colabrio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="main_11">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-12 col-sm-12">
+                            <div className="text">
+                                <div className='subtitle'>Create an account</div>
+                                <h2>Get started with <br /> Ohio template.</h2>
+                                <p>New features.New appearance. <br /> No risk and credit card required</p>
+                                <button>Get Starterd<AiOutlineArrowRight className='icon' /></button>
+                            </div>
+                        </div>
+                        <div className="col-lg-8 col-md-6 col-sm-12">
+                            <div className="image">
+                                <img src={Template} alt="Template of Ohio" className='img-fuild' width={650} height={500} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="main_12">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
+                            <div className="text_1">
+                                <div className="logo">
+                                    <img src={Logo} alt="This is Logo" />
+                                </div>
+                                <div>Fb. / lg. / tw. / Be.</div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12">
+                            <div className="text_2">
+                                <h3>Rotterdam</h3>
+                                <div>Ohio Digital Media LTD</div>
+                                <ul>
+                                    <li>Graaf Florisstraat 22A,</li>
+                                    <li>3021 CH Rotterdam</li>
+                                    <li>Netherlands</li>
+                                </ul>
+                                <h3>Barcelona</h3>
+                                <div>Ohio Digital LTD</div>
+                                <ul>
+                                    <li>
+                                        365 Gran Via de Corts
+                                    </li>
+                                    <li>
+                                        Catalanes,BA 08015
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12">
+                            <div className="text_3">
+                               <h3>Work inquiries</h3>
+                               <p>Interested in working with us?</p>
+                               <div>hello@clbthemes.com</div>
+                               <h3>Career</h3>
+                               <p>Looking for a job opportunity?</p>
+                               <div>See open position</div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12">
+                            <div className="text_4">
+                             <h3>Sign up for the newsletter</h3>
+                             <div className='input'><input type="email" name="" id="" />Sign Up</div>
+                            <div><input type="checkbox" name="" className='me-2 p-2 mt-2' id="" />i'm okay with getting emails and having that acitivity tracked to improve my experience</div>
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
