@@ -9,7 +9,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 // import Dashboard from "./pages/Frontend/Dashboard"
 // import Assignment from './pages/Frontend/Assignment'
 // import Calendar from "./pages/Frontend/Calendar";
-// import AddButton from "./pages/Frontend/AddButton";
+import AddButton from "./pages/Frontend/AddButton";
 // import ToDo from "./pages/Frontend/Home/Todo";
 import LandPages from  './pages/Frontend/LandPages'
 
@@ -21,12 +21,12 @@ function App() {
       {/* <Dashboard /> */}
       {/* <Assignment /> */}
       {/* <Calendar/> */}
-      {/* <AddButto n/> */}
+      <AddButton/>
       {/* <SignUp /> */}
       {/* <Show /> */}
       {/* <Api /> */}
       {/* <ToDo/> */}
-      <LandPages/>
+      {/* <LandPages/> */}
       <ToastContainer />
     </div>
   );
