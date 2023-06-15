@@ -1,52 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-const Todo = () => {
-  const [todoList, setTodoList] = useState([]);
+export default function Todo() {
 
-  const addTodo = (todo) => {
-    const newTodos = [...todoList, todo];
-    setTodoList(newTodos);
-    localStorage.setItem('todos', JSON.stringify(newTodos));
-  };
+  const [state, setState] = useState({ email: "" })
 
-  const removeTodo = (index) => {
-    const newTodos = [...todoList];
-    newTodos.splice(index, 1);
-    setTodoList(newTodos);
-    localStorage.setItem('todos', JSON.stringify(newTodos));
-  };
+  const handlechange = e => {
+    setState(s => ({ ...s, [e.target.name]: e.target.value }))
+  }
 
-  React.useEffect(() => {
-    const storedTodos = localStorage.getItem('todos');
-    if (storedTodos) {
-      setTodoList(JSON.parse(storedTodos));
-    }
-  }, []);
+  const sendEmail = (e) => {
+    e.preventDefault()
+    console.log(state)
+  
+  }
+
+  // const sendEmail = async (admin) => {
+
+  //   setisProcessing(true)
+  //   const url = `${window.origin}/auth/create-account/?email=${admin.email}&data=${admin.id}&state=${state.id}`
+  //   let data = { ...admin, url, logo: state.logo?.url }
+  //   delete data.status
+  //   delete data.key
+
+  //   emailjs.send('service_jayqowf', 'usable_invitaion_email', data, 'user_tnAVeVrREvL3j8o9A2J7k')
+  //     .then((result) => {
+  //       window.toastify("Invitation email has been successfully sent", "success")
+  //       setisProcessing(false)
+  //     }, (error) => {
+  //       window.toastify("Something went wrong. Please try again.", "error")
+  //       setisProcessing(false)
+  //     })
+  // };
+
 
   return (
-    <div>
-      <ul>
-        {todoList.map((todo, index) => (
-          <li key={index}>
-            {todo}
-            <button type="button" onClick={() => removeTodo(index)}>
-              X
-            </button>
-          </li>
-        ))}
-      </ul>
-      <input
-        type="text"
-        placeholder="Add a todo"
-        onKeyDown={(e) => {
-          if (e.key === 'Enter') {
-            addTodo(e.target.value);
-            e.target.value = '';
-          }
-        }}
-      />
-    </div>
-  );
-};
-
-export default Todo;
+    <>
+      <h1 className='text-center'>React Email</h1>
+      <div className='py-5 text-center'>
+        <label className='fs-4 me-3'>Enter Your Email:</label>
+        <input type="email" required className='w-25 rounded-3' name='email' onChange={handlechange} />
+        <br />
+        <div className='py-3'>
+          <button className='py-2 px-3 border-0 rounded-3 bg-info fs-5' onClick={sendEmail}>Send Email</button>
+        </div>
+      </div>
+    </>
+  )
+}
