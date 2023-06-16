@@ -16,7 +16,7 @@ function Home() {
   return (
 
     <div>
-      <h2 className='text-center fw-bold display-3 py-5 bg-success'>This is commet time</h2>
+      <h2 className='text-center fw-bold display-3 py-5 bg-success'>This is Calendar Api</h2>
       <div className="d-flex justify-content-center mt-5">
 
         <GoogleLogin clientId='359967600577-pb331qehjd6decgfglmv5go9aag4upqn.apps.googleusercontent.com'
