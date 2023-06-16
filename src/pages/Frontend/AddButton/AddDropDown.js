@@ -24,7 +24,7 @@ function AddDropDown() {
     <div>
       <form>
         <input type="file" onChange={handleChange} />
-        <button onClick={submit}>Add</button>
+        <button onClick={submit}>Submit</button>
       </form>
       <div>
         <div>
